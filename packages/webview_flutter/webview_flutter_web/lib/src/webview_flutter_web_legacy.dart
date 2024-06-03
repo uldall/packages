@@ -223,4 +223,10 @@ class WebWebViewPlatformController implements WebViewPlatformController {
   Future<void> loadFlutterAsset(String key) {
     throw UnimplementedError();
   }
+
+  /// Sets the IFrame Credentialless
+  /// https://developer.mozilla.org/en-US/docs/Web/Security/IFrame_credentialless
+  void setIFrameCredentialless(bool flag) {
+    _element.setAttribute('credentialless', flag ? 'true' : 'false');
+  }
 }
